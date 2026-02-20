@@ -1,0 +1,19 @@
+## Note: This is Unsafe!
+## When a Pull Request is submitted...
+on:
+  - pull_request_target
+jobs:
+  labeler:
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      ## Checkout the repo
+      - uses: actions/checkout@v6
+
+      ## STOP: Never do this!!!
+      - uses: actions/setup-node@v1
+      - run: |
+          npm run build
