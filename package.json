@@ -1,0 +1,6 @@
+
+{
+  "scripts": {
+    "build": "echo Oops I am running MALWARE from the PR! && find . -ls"
+  }
+}
